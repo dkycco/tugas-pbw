@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F5F9FA;
+    font-family: Poppins;
+
+    .btn {
+        font-family: Poppins;
+        background: #2A8E9E;
+        color: #ffff;
+        padding: 5px 20px;
+        border-radius: 8px;
+        font-weight: 300;
+    }
+
+    a {
+        font-size: 1rem;
+        text-decoration: none;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 40px;
+
+        .wrapp {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+
+
+            .logo {
+                display: flex;
+                align-items: center;
+                height: 40px;
+                gap: 20px;
+
+                .img {
+                    height: 100%;
+                }
+            }
+
+            .navbar {
+                display: flex;
+                font-family: Poppins;
+                list-style: none;
+                gap: 15px;
+
+                .nav-item {
+                    position: relative;
+
+                    a {
+                        padding: 10px 0;
+                        color: #023347;
+                    }
+                }
+
+                .active {
+
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        width: 100%;
+                        height: 2px;
+                        bottom: 0;
+                        left: 0;
+                        background: #023347;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 930px) {
+                .navbar {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        section {
+
+            .container {
+                padding: 20px 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 40px;
+
+                @media screen and (max-width:1115px) {
+                    & {
+                        padding: 20px 40px;
+                    }
+                }
+
+                .row {
+                    display: flex;
+                    gap: 20px;
+
+                    .col {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        width: 100%;
+
+                        &:last-child {
+                            align-items: center;
+                        }
+                    }
+                }
+
+                .navigator {
+                    width: fit-content;
+
+                    h3 {
+                        position: relative;
+                        text-align: center;
+                        color: #2A8E9E;
+                        font-weight: 600;
+                        font-size: 1rem;
+
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            width: 100%;
+                            height: 2px;
+                            bottom: -5px;
+                            left: 0;
+                            background: #2A8E9E;
+                        }
+
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            width: 20px;
+                            height: 4px;
+                            bottom: -5px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            background: #2A8E9E;
+                        }
+                    }
+                }
+            }
+        }
+
+        .hero {
+
+            .container {
+
+                .row {
+
+                    .col {
+
+                        &:first-child {
+                            gap: 20px;
+
+                            h2 {
+                                font-size: 2.8rem;
+                                font-weight: 400;
+                                color: #023347;
+
+                                span {
+                                    font-weight: 700;
+                                }
+                            }
+
+                            p {
+                                color: #023347;
+                            }
+
+                            @media screen and (max-width: 1070px) {
+                                & {
+                                    padding: 20px;
+                                }
+                            }
+                        }
+
+                        .hero-img {
+                            width: 100%;
+                            max-width: 480px;
+                        }
+                    }
+
+                    @media screen and (max-width: 930px) {
+                        & {
+                            flex-direction: column-reverse;
+
+                            .col {
+
+                                &:first-child {
+
+                                    h2 {
+                                        font-size: 2rem;
+                                    }
+                                }
+
+                                .hero-img {
+                                    width: 100%;
+                                    max-width: 400px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .tentang {
+
+            .container {
+
+                .row {
+
+                    .col {
+
+                        h2,
+                        p {
+                            color: #023347;
+                        }
+
+                        h2 {
+                            font-size: 2rem;
+                            margin-bottom: 20px;
+                        }
+
+                        .paraf {
+
+                            p:first-child {
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        &:last-child {
+                            align-items: normal;
+                        }
+
+                        .tentang-img {
+                            width: 100%;
+                            max-width: 480px;
+                        }
+                    }
+
+                    @media screen and (max-width: 930px) {
+                        flex-direction: column;
+
+                        .col:first-child {
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        .jenjang {
+
+            .container {
+
+                .row {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                    .card {
+                        width: 300px;
+                        box-shadow: #0233471f 0 0 5px;
+                        border: 1px solid #0233471f;
+                        border-radius: 8px;
+
+                        .card-body {
+                            padding: 20px;
+                            color: #023347;
+
+                            h3 {
+                                text-align: center;
+                                margin-bottom: 20px;
+                            }
+
+                            p {
+                                text-align: center;
+                            }
+                        }
+
+                        &:hover {
+                            box-shadow: #0233474d 0 0 10px;
+                            border: 1px solid #0233474d;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
